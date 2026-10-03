@@ -13,3 +13,12 @@ To get started:
 1. Have Fun!
 
 **Note: This program is built to run on Python 3.**
+
+## Development
+
+The game logic lives in a pure engine (`World` + `handle_command`) inside
+`zork.py`, so it can be driven without the interactive prompt. Run the
+regression suite (map traversal, item state, determinism, failure safety,
+save/replay hygiene, command normalization) with:
+
+    python3 -m unittest test_zork -v
